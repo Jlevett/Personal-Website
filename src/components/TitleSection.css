@@ -1,0 +1,115 @@
+#background_image {
+  width:100%;
+  /*height:100%;*/
+  position: absolute;
+  z-index: -1;
+}
+#intro_container{
+  display: inline-block;
+  width:100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#covering_canvas {
+  position: relative;
+  z-index: 2;
+}
+#title_container {
+  z-index: 1;
+  position: absolute;
+  top:10%;
+  width:100%;
+  text-align: center;
+}
+#holder {
+    display: inline-block;
+   -webkit-animation: beat 3s infinite alternate;
+    -webkit-animation-delay: 10s;
+    animation: beat 3s infinite alternate;
+    animation-delay: 10s;
+}
+@-webkit-keyframes beat {
+  to {
+    transform: scale(1.05);
+  }
+}
+@keyframes beat{
+  to {
+    transform: scale(1.051);
+  }
+}
+
+#title{
+  display: inline-block;
+  padding-left: 1.2vw;
+  padding-right: 1.5vw;
+  font-family: 'Knewave', cursive;
+  font-size: 11vw;
+  color: #FF0018;
+  border: 1vw solid #FF0018;
+  border-radius: 1.5vw;
+
+
+}
+.titleAnimation {
+  animation-name: titleAnimation;
+  animation-delay: 0s;
+  animation-duration: 6s;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: titleAnimation;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes titleAnimation {
+0% {
+    opacity: 0;
+    background-color: #007C6B;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #007C6B;
+   }
+  50% {
+    opacity: 0.8;
+    background-color: #007C6B;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #007C6B;
+  }
+  100% {
+    opacity: 1;
+    background-color: #FFA400;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #007C6B;
+  }
+}
+
+@-webkit-keyframes {
+  0% {
+    opacity: 0;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #FF0018;
+   }
+  50% {
+    opacity: 0.5;
+    background-color: blue;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #FF0018;
+  }
+  100% {
+    opacity: 1;
+    background-color: #FFA400;
+    -webkit-text-stroke-width: 0.6vw;
+    -webkit-text-stroke-color: #007C6B;
+  }
+}
+.subtitle {
+  color:#FF0018;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size:6vw;
+}
+/*
+http://paletton.com/#uid=33e0u0kw0wjjzDeoTydyhoQDijx
+*/

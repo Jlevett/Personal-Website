@@ -1,0 +1,37 @@
+.arrowContainer {
+  z-index: 1;
+  bottom: 0%;
+  width:100%;
+  text-align: center;
+  visibility: hidden;
+}
+
+.arrowHolder {
+  display: inline-block !important;
+  cursor: pointer;
+}
+
+.arrowHolder > * {
+  color:#006255;
+  font-size: 5vw;
+}
+
+.arrowHolder:hover > * {
+  color:#007C6B;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+     visibility: visible;
+  }
+  40% {
+    transform: translateY(-1.5vw);
+    visibility: visible;
+  }
+  60% {
+    transform: translateY(-1vw);
+      visibility: visible;
+  }
+}
+

@@ -1,0 +1,56 @@
+#sectionContainer{
+	width:100%;
+}
+
+	#aboutMeContent {
+		width:100%;
+		display: flex;
+	  	flex-wrap: wrap;
+
+	}
+
+		#profileImageContainer{
+			width:50%;
+			text-align: center;
+		}
+			#profileImage {
+				   margin:3vw;
+				   border-radius: 50%;
+				   width:80%;
+			}
+
+		#profileTextContainer{
+			width:50%;
+			position: relative
+		}
+			#aboutMeText {
+				width: 90%;
+   				position: absolute;
+   				top: 50%;
+   				transform: translate(0, -50%);
+   				padding-left:5%;
+				font-family: 'Lato', Arial, sans-serif;
+				font-size: 2vw;
+			}
+
+@media screen and (max-width: 550px){
+	#profileImageContainer{
+		width:100%;
+	}
+	#profileTextContainer{
+		width:100%;
+	}
+	#profileImage {
+   		width:60%;
+	}
+	#aboutMeText {
+		width: 80%;
+		padding-left:0%;
+	  	margin-left: auto;
+ 		margin-right: auto;
+		margin-top:2vw;
+		position: relative;
+		font-size: 4vw;
+	}
+}
+
