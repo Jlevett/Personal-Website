@@ -12,12 +12,12 @@
 }
 
 .arrowHolder > * {
-  color:#006255;
-  font-size: 5vw;
+  color:#007C6B;
+  font-size: 3vw;
 }
 
 .arrowHolder:hover > * {
-  color:#007C6B;
+  color:#006255;
 }
 
 @keyframes bounce {
@@ -34,4 +34,9 @@
       visibility: visible;
   }
 }
-
+/*Hide arrow on mobile device potrait mode*/
+@media screen and (max-width: 550px){
+  .arrowContainer {
+    display: none;
+  }
+}

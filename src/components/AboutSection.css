@@ -1,37 +1,33 @@
 #sectionContainer{
 	width:100%;
 }
+#aboutMeContent {
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+#profileImageContainer{
+	width:50%;
+	text-align: center;
+}
+#profileImage {
+	margin:3vw;
+	border-radius: 50%;
+	width:80%;
+	max-width:500px;
+}
+#profileTextContainer{
+	width:50%;
+	position: relative;
+}
 
-	#aboutMeContent {
-		width:100%;
-		display: flex;
-	  	flex-wrap: wrap;
-
-	}
-
-		#profileImageContainer{
-			width:50%;
-			text-align: center;
-		}
-			#profileImage {
-				   margin:3vw;
-				   border-radius: 50%;
-				   width:80%;
-			}
-
-		#profileTextContainer{
-			width:50%;
-			position: relative
-		}
-			#aboutMeText {
-				width: 90%;
-   				position: absolute;
-   				top: 50%;
-   				transform: translate(0, -50%);
-   				padding-left:5%;
-				font-family: 'Lato', Arial, sans-serif;
-				font-size: 2vw;
-			}
+#aboutMeText {
+	font-size:calc(5px + 1.7vw);
+	font-family: 'Lato', Arial, sans-serif;
+	width: 95%;
+	padding-left:5%;
+	margin-top:6vw;
+}
 
 @media screen and (max-width: 550px){
 	#profileImageContainer{
@@ -44,13 +40,13 @@
    		width:60%;
 	}
 	#aboutMeText {
-		width: 80%;
-		padding-left:0%;
-	  	margin-left: auto;
- 		margin-right: auto;
-		margin-top:2vw;
-		position: relative;
+		margin-top:0;
 		font-size: 4vw;
+		padding-bottom: 4vw;
+		padding-top:2vw;
+		width: 80%;
+		text-align:justify;
+		transform: translate(10%, 0%);
+
 	}
 }
-

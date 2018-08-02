@@ -1,5 +1,11 @@
 /*Filller delete later*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#79BDB4 !important;
+}
+
+
 .fill {
 	width:100%;
-	height:200px;
 }
