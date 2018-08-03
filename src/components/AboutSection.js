@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import SectionHeading from "./SectionHeading.js";
 import DownArrow from './DownArrow.js';
 
-import profilephoto from '../images/me.png';//https://pixabay.com/en/sea-water-holidays-blue-background-2755908/
+import profilephoto from '../images/L/me.jpg';//https://pixabay.com/en/sea-water-holidays-blue-background-2755908/
 import ScrollAnimation from 'react-animate-on-scroll';//https://dbramwell.github.io/react-animate-on-scroll/#home
 import "./AboutSection.css";
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import SectionHeading from "./SectionHeading.js";
 import DownArrow from './DownArrow.js';
-import ScrollAnimation from 'react-animate-on-scroll';//https://dbramwell.github.io/react-animate-on-scroll/#home
+import ScrollAnimation from 'react-animate-on-scroll';
 import "./SkillsSection.css";
 
 import css from "../images/icons/css3.svg";
@@ -18,36 +18,37 @@ import npm from "../images/icons/npm.svg";
 import react from "../images/icons/react.svg";
 import reactrouter from "../images/icons/reactrouter.svg";
 import webpack from "../images/icons/webpack.svg";
-
-import responsivedesign from "../images/icons/responsivedesign.png";
+import pwa from "../images/icons/pwa.png";
+import responsivedesign from "../images/icons/responsivedesign.svg";
 import ay11 from "../images/icons/ay11.png";
 import api from "../images/icons/api.png";
 import ajax from "../images/icons/ajax.png";
 
 class SkillsSection extends Component{
 
+  randomizeAnimation = ()=>{
+    const animationType = ['shake', 'bounce','tada','wobble', 'jello', 'swing','rubberBand'];
+    let random =Math.floor(Math.random() * animationType.length);
+    return animationType[random];
+  }
+
   render(){
+
+    const icons = [react, reactrouter, es6, jquery, html5, css, js, api, jasmine, git, java, pwa, npm,
+              webpack, gulp, ay11,  ajax, responsivedesign];
+    const iconNames = ['REACT', 'REACT ROUTER','JS ES6', 'JQUERY', 'HTMLL5', 'CSS3', 'JAVASCRIPT',
+                   'API','JASMINE TDD', 'GIT', 'JAVA','PROGRESSIVE WEB APP', 'NPM', 'WEBPACK', 'GULP', 'ACCESSIBILITY ',
+                   'AJAX','RESPONSIVE DESIGN'];
   	return(
   		<div id='skillssection'>
   			<SectionHeading title="Software Skills"/>
   				<div id='skillsContainer'>
-            <img src={css}alt ="CSS3"   className='image' />
-            <img src={es6}alt ="CSS3"   className='image' />
-            <img src={git}alt ="CSS3"   className='image' />
-            <img src={gulp}alt ="CSS3"   className='image' />
-            <img src={jasmine}alt ="CSS3"   className='image' />
-            <img src={java}alt ="CSS3"   className='image' />
-            <img src={js}alt ="CSS3"   className='image' />
-            <img src={jquery}alt ="CSS3"   className='image' />
-            <img src={npm}alt ="CSS3"   className='image' />
-            <img src={react}alt ="CSS3"   className='image' />
-            <img src={reactrouter}alt ="CSS3"   className='image' />
-            <img src={webpack}alt ="CSS3"   className='image' />
-            <img src={responsivedesign}alt ="CSS3"   className='image' />
-            <img src={ay11}alt ="CSS3"   className='image' />
-            <img src={api}alt ="CSS3"   className='image' />
-            <img src={ajax}alt ="CSS3"   className='image' />
-           <img src={html5}alt ="CSS3"   className='image' />
+            {icons.map((icon,index)=>(
+              <ScrollAnimation initiallyVisible={true} animateIn={this.randomizeAnimation()} key={icon}>
+                  <img src={icon}alt ={iconNames[index]} className='iconImage' />
+                     <p className="titleIcon">{iconNames[index]}</p>
+              </ScrollAnimation>
+            ))}
         </div>
         <DownArrow delayShow={0}/>
       </div>
@@ -56,8 +57,3 @@ class SkillsSection extends Component{
 }
 export default SkillsSection;
 
-
-
-// Missing ES6, API, AJAX, W3C WCAG
-
-//API Integration, Ay11 Accesibility, PWA (Service Worker), RESPONSIVe Design

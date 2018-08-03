@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js'; //https://www.npmjs.com/package/react-particles-js
 import particlePropJson from '../json/particles.json';
 import Typist from 'react-typist';
-import background from '../images/sea.jpg';//https://pixabay.com/en/sea-water-holidays-blue-background-2755908/
+import background from '../images/L/sea.jpg';//https://pixabay.com/en/sea-water-holidays-blue-background-2755908/
 import DownArrow from './DownArrow.js';
 
 
