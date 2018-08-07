@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SectionHeading from "./SectionHeading.js";
 import DownArrow from './DownArrow.js';
 import "./OutsideWork.css";
 
@@ -12,7 +11,6 @@ class OutsideWork extends Component{
   render(){
   return(
       <div id=''>
-      <SectionHeading title="OUTSIDE WORK"/>
         <div className=''>
         HELLO THERE. IM THE OUTSIDE
         </div>

@@ -1,0 +1,10 @@
+.sectionTitle{
+	font-family: 'Righteous', cursive;
+	font-size: 5vw;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	margin:0 !important;
+	padding:5px;
+	background-color: black;
+}

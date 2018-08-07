@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SectionHeading from "./SectionHeading.js";
 import DownArrow from './DownArrow.js';
 import "./ProjectSection.css";
 
@@ -7,7 +6,7 @@ import "./ProjectSection.css";
 import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import profilephoto from '../images/L/me.jpg';//DELETE LATER
+// import profilephoto from '../images/L/me.jpg';//DELETE LATER
 
 const projects =[
         {
@@ -74,7 +73,7 @@ class ProjectSection extends Component{
 
   	return(
   		<div>
-        <SectionHeading title="Projects"/>
+
           <Carousel showArrows={true}   emulateTouch autoPlay  useKeyboardArrows infiniteLoop showThumbs={true}>
 
 
@@ -88,11 +87,11 @@ class ProjectSection extends Component{
 
 
           <div>
-               <img  alt='profile shot' src={profilephoto} />
-              <p className="legend">Legend 2</p>
+
+                 <p className="legend">Legend 2</p>
           </div>
           <div>
-              <img  alt='profile shot' src={profilephoto} />
+
               <p className="legend">Legend 3</p>
           </div>
       </Carousel>
@@ -105,6 +104,7 @@ class ProjectSection extends Component{
 
 }
 export default ProjectSection;
+ // <img  alt='profile shot' src={profilephoto} />
 
 // https://www.npmjs.com/package/react-slick
 // https://www.npmjs.com/package/react-responsive-carousel

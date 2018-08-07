@@ -8,15 +8,7 @@ class DownArrow extends Component{
 
 render(){
       return (
-      <div className="arrowContainer"
-           style={{
-               'WebkitAnimation': 'bounce 2s infinite',
-               'WebkitAnimationDelay': `${this.props.delayShow}s`,
-                'animation': 'bounce 2s infinite',
-                'animationDelay': `${this.props.delayShow}s`,
-                'position': this.props.position==='first'? 'absolute':'relative'
-             }}
-      >
+      <div className="arrowContainer">
         <div className='arrowHolder'>
             <FontAwesomeIcon icon={faAngleDoubleDown}/>
         </div>

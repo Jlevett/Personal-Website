@@ -1,23 +1,28 @@
 .arrowContainer {
   z-index: 1;
-  bottom: 0%;
+  bottom: 0;
   width:100%;
   text-align: center;
   visibility: hidden;
+  animation: bounce 2s infinite;
+   position: absolute;
+    left: 0; top: 0; right: 0; bottom: 10;
+
 }
 
 .arrowHolder {
-  display: inline-block !important;
+
   cursor: pointer;
+  background-color: yellow;
 }
 
 .arrowHolder > * {
-  color:#007C6B;
+  color:black;
   font-size: 3vw;
 }
 
 .arrowHolder:hover > * {
-  color:#006255;
+  color:black;
 }
 
 @keyframes bounce {

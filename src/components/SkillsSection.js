@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import SectionHeading from "./SectionHeading.js";
-import DownArrow from './DownArrow.js';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "./SkillsSection.css";
+import SectionTitle from "./smallcomponents/SectionTitle.js"
 
 import css from "../images/icons/css3.svg";
 import es6 from "../images/icons/es6.svg";
@@ -24,6 +23,14 @@ import ay11 from "../images/icons/ay11.png";
 import api from "../images/icons/api.png";
 import ajax from "../images/icons/ajax.png";
 
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
+const icons = [react, reactrouter, es6, jquery, html5, css, js, api, jasmine, git, java, pwa, npm,
+              webpack, gulp, ay11,  ajax, responsivedesign];
+const iconNames = ['REACT', 'REACT ROUTER','JS ES6', 'JQUERY', 'HTMLL5', 'CSS3', 'JAVASCRIPT',
+                   'API','JASMINE TDD', 'GIT', 'JAVA','PROGRESSIVE WEB APP', 'NPM', 'WEBPACK', 'GULP', 'ACCESSIBILITY ',
+                   'AJAX','RESPONSIVE DESIGN'];
+
+
 class SkillsSection extends Component{
 
   randomizeAnimation = ()=>{
@@ -34,26 +41,28 @@ class SkillsSection extends Component{
 
   render(){
 
-    const icons = [react, reactrouter, es6, jquery, html5, css, js, api, jasmine, git, java, pwa, npm,
-              webpack, gulp, ay11,  ajax, responsivedesign];
-    const iconNames = ['REACT', 'REACT ROUTER','JS ES6', 'JQUERY', 'HTMLL5', 'CSS3', 'JAVASCRIPT',
-                   'API','JASMINE TDD', 'GIT', 'JAVA','PROGRESSIVE WEB APP', 'NPM', 'WEBPACK', 'GULP', 'ACCESSIBILITY ',
-                   'AJAX','RESPONSIVE DESIGN'];
+
   	return(
-  		<div id='skillssection'>
-  			<SectionHeading title="Software Skills"/>
-  				<div id='skillsContainer'>
+  		<div id='skillSection'>
+          {blankSectionBeforeTitle}
+          <SectionTitle name='Software Skills'/>
+  				<div id='skillContent'>
             {icons.map((icon,index)=>(
-              <ScrollAnimation initiallyVisible={true} animateIn={this.randomizeAnimation()} key={icon}>
-                  <img src={icon}alt ={iconNames[index]} className='iconImage' />
-                     <p className="titleIcon">{iconNames[index]}</p>
-              </ScrollAnimation>
+              <div className='iconContainer' key={icon}>
+
+                       <img src={icon} alt ={iconNames[index]} className='iconImage' />
+
+                  <p className="icontTitle">{iconNames[index]}</p>
+              </div>
             ))}
         </div>
-        <DownArrow delayShow={0}/>
+
       </div>
   )}
 
 }
 export default SkillsSection;
 
+// animateIn={this.randomizeAnimation()}
+ // <ScrollAnimation initiallyVisible={true}>
+ //  </ScrollAnimation>

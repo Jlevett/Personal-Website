@@ -1,32 +1,32 @@
 {
   "particles": {
     "number": {
-      "value": 50,
+      "value": 128,
       "density": {
         "enable": true,
-        "value_area": 200
-
+        "value_area": 789.1476416322727
       }
     },
     "color": {
-      "value": "#FFF"
+      "value": "#000000"
     },
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0,
-        "color": "#000"
+        "width": 1,
+        "color": "#000000"
       },
       "polygon": {
         "nb_sides": 5
       },
       "image": {
-        "width": "100%",
-        "height": "100%"
+        "src": "",
+        "width": 100,
+        "height": 100
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.6012795228245705,
       "random": false,
       "anim": {
         "enable": false,
@@ -36,25 +36,25 @@
       }
     },
     "size": {
-      "value": 2,
+      "value": 3,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 80,
+        "speed": 40,
         "size_min": 0.1,
         "sync": false
       }
     },
     "line_linked": {
       "enable": true,
-      "distance": 100,
-      "color": "#000",
-      "opacity": 0.7,
+      "distance": 150,
+      "color": "#000000",
+      "opacity": 0.7375695479981398,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 3,
+      "speed": 6,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -72,30 +72,30 @@
     "events": {
       "onhover": {
         "enable": false,
-        "mode": "repulse"
+        "mode": "bubble"
       },
       "onclick": {
-        "enable": false,
+        "enable": true,
         "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 300,
+        "distance": 400,
         "line_linked": {
-          "opacity": 0.3
+          "opacity": 1
         }
       },
       "bubble": {
-        "distance": 800,
-        "size": 80,
+        "distance": 400,
+        "size": 40,
         "duration": 2,
-        "opacity": 0.8,
+        "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 400,
+        "distance": 200,
         "duration": 0.4
       },
       "push": {
