@@ -1,110 +1,128 @@
 import React, { Component } from 'react';
-import DownArrow from './DownArrow.js';
-import "./ProjectSection.css";
-
-
 import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import SectionTitle from "./smallcomponents/SectionTitle.js"
+import "./ProjectSection.css";
 
-// import profilephoto from '../images/L/me.jpg';//DELETE LATER
+import project1 from '../images/L/mapsreact.png';
+import project2 from '../images/L/myreads.png';
+import project3 from '../images/L/restaurant.png';
+import project4 from '../images/L/frogger.png';
+import project5 from '../images/L/memory.png';
+import project6 from '../images/L/feedreader.png';
+
+const projectImages = [project1, project2, project3, project4, project5, project6];
+
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
 
 const projects =[
         {
-          name:'Neighborhood Map React',
-          image:'mapsreact.png',
+          name:'Maps React',
           link:'https://jlevett.github.io/Neighborhood-Map-React/',
-          tech: ['Reactjs','HTML5', 'CSS3', 'Foursquare API','Google Maps API', 'JS ES6', 'AY11'],
-          about:'This single page app uses the Google maps API and the location-based service Foursquare API to list some attractions in the Blue Mountains Katoomba, Australia. Includes a search functionality that filters out the markers by query. Made with responsiveness and a11y in mind.',
+          tech: ['Reactjs','HTML5', 'CSS3', 'API', 'JS ES6', 'AY11'],
+          long:'This single page app uses the Google maps API and the location-based service Foursquare API to list some attractions in the Blue Mountains Katoomba, Australia. Includes a search functionality that filters out the markers by query. Made with responsiveness and a11y in mind.',
           short:'Single page React app that uses the Google Maps and FourSquare API.'
         },
         {
           name:'My Reads React',
-          image:'myreads.png',
           link:'https://jlevett.github.io/Myreads-App-React/',
-          tech: ['Reactjs', 'react-router', 'CSS3', 'HTML5', 'AJAX', 'JS ES6'],
-          about:'A front end application for managing books to read/already read (Similar to Goodreads). Leveraged React and react-router to support a dynamic user interface that interacts with an API server and client library.',
+          tech: ['Reactjs', 'react-router', 'CSS3', 'HTML5', 'AJAX', 'ES6'],
+          long:'A front end application for managing books to read/already read (Similar to Goodreads). Leveraged React and react-router to support a dynamic user interface that interacts with an API server and client library.',
           short:'React application for managing books to read/already read. Similar to Goodreads.'
         },
         {
           name:'Restaurant Review Site',
-          image:'restaurant.png',
           link:'https://jlevett.github.io/Restaurant-Review-Site/',
-          tech: ['PWA - serviceWorker', 'HTML5', 'CSS3', 'Google Maps API', 'AY11', 'Responsive CSS' ],
-          about:'Transformed a static webpage into a mobile-ready offline web application. The code was updated to resolve these issues and add extra features while still maintaining the included functionality.',
+          tech: ['PWA', 'HTML5', 'CSS3', 'API', 'AY11', 'Responsive' ],
+          long:'Transformed a static webpage into a mobile-ready offline web application. The code was updated to resolve these issues and add extra features while still maintaining the included functionality.',
           short:'A mobile-ready offline web application.'
         },
         {
-          name:'Frogger Aracade Game',
-          image:'frogger.png',
+          name:'Frogger Arcade Game',
           link:'https://jlevett.github.io/Frogger-Arcade-Game/',
-          tech: ['JS', 'HTML5','CCS3', 'Canvas animation', 'howler.js'],
-          about:'This is a take on the classic arcade game Frogger. It required HTML, CSS, JS and Canvas skills. The image resource management file and a basic loop engine file (that was worked on later by myself) was provided prior to starting the project.',
+          tech: ['JS', 'HTML5','CCS3', 'Canvas', 'howler.js'],
+          long:'This is a take on the classic arcade game Frogger. It required HTML, CSS, JS and Canvas skills. The image resource management file and a basic loop engine file (that was worked on later by myself) was provided prior to starting the project.',
           short:'This is a take on the classic arcade game Frogger.'
 
         },
         {
           name:'Matching Game',
-          image:'memory.png',
           link:'https://jlevett.github.io/Memory-Game-Project/',
           tech: ['CSS3', 'HTML5', 'JS'],
-          about:'This is a classic memory game tester. Working with time and the least amount of moves, find each matching card (to complete a pair). To win, repeat until all cards are revealed.',
+          long:'This is a classic memory game tester. Working with time and the least amount of moves, find each matching card (to complete a pair). To win, repeat until all cards are revealed.',
           short:'This is a classic memory game tester.  To win, repeat until all cards are revealed'
         },
         {
-          name:'FeedreaderJasmine Test Suites',
-          image:'feedreader.png',
+          name:'Jasmine Test Suites',
           link:'https://jlevett.github.io/Feedreader-Jasmine-Test-Suites/#',
-          tech: ['Jasmine testing framework', 'Gulp'],
-          about:'Given a web-based application that reads RSS feeds. The task was to create test suites for the feedreader using Jasmine. Writing these test suites required analyzing multiple aspects of the application',
+          tech: ['Jasmine TDD', 'Gulp'],
+          long:'Given a web-based application that reads RSS feeds. The task was to create test suites for the feedreader using Jasmine. Writing these test suites required analyzing multiple aspects of the application',
           short:'Test suites for a feedreader site using Jasmine.'
         }
       ];
 
 class ProjectSection extends Component{
+  state = {
+    innerWidth:0,
+    innerHeight:0
+  }
+  componentDidMount(){
+    this.checkWindowDimensions();
 
-  method = ()=>{
-
+  }
+  checkWindowDimensions = () =>{
+      this.setState({innerWidth:window.innerWidth, innerHeight:window.innerHeight})
+      let that=this;
+      window.addEventListener("resize",
+       function(e){
+        that.setState({innerWidth:window.innerWidth, innerHeight:window.innerHeight})
+      });
   }
 
   render(){
-
-    console.log(projects[1].image);
-    console.log('../images/L/'+projects[1].image);
-
   	return(
-  		<div>
-
-          <Carousel showArrows={true}   emulateTouch autoPlay  useKeyboardArrows infiniteLoop showThumbs={true}>
-
-
-
-          <div >
-              <p className="legend">{projects[1].name}</p>
-
-
-          </div>
-
-
-
-          <div>
-
-                 <p className="legend">Legend 2</p>
-          </div>
-          <div>
-
-              <p className="legend">Legend 3</p>
-          </div>
-      </Carousel>
-      <DownArrow delayShow={1}/>
+    <div id='projectSection'>
+      {blankSectionBeforeTitle}
+      <SectionTitle name='projects'/>
+        <div id='projectContent'>
+          <Carousel emulateTouch  useKeyboardArrows  autoPlay>
+            {projects.map((project,index)=>(
+              <div className='project' key={project+index}>
+                <img style={{'display':'none'}} alt=''/>
+                <div className="projectTitleContainer">
+                  <h2 className='projectTitle'>{project.name}</h2>
+                </div>
+                <div className='projectImageContainer'>
+                    <img className='projectImage' src={projectImages[index]} alt={project.name}/>
+                </div>
+              <div className='projectInfoContainer'>
+                <div className='projectDescriptionContainer'>
+                  <p className='projectDescription'>
+                    {this.state.innerWidth<800
+                    ?   project.short: this.state.innerHeight<680
+                    ?   project.short : project.long}
+                  </p>
+                </div>
+                  <ul className='projectTechContainer'>
+                    {project.tech.map((t)=>(
+                    <li key={t} className='techPiece'>{t}</li>
+                    ))}
+                  </ul>
+                <div className='buttonHolder'>
+                  <a href={project.link} target="_blank" className="link">
+                    <h3 className="demoButton">Open App</h3>
+                  </a>
+                </div>
+              </div>
+              <div className='fluffer'>
+             </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
-
-
-
   )}
-
 }
-export default ProjectSection;
- // <img  alt='profile shot' src={profilephoto} />
 
-// https://www.npmjs.com/package/react-slick
-// https://www.npmjs.com/package/react-responsive-carousel
+export default ProjectSection;
+

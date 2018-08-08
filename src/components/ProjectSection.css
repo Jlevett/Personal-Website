@@ -1,4 +1,184 @@
-/*  .projectcard {
-    height: 200px;
-    background-color: red;
-  /*}*/
+#projectSection {
+	display:flex;
+	flex-direction: column;
+	height: 100vh;
+}
+#projectSection  > div {
+	flex: 1;
+}
+#projectContent {
+	height:100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+}
+.carousel, .carousel-slider, .slider-wrapper, .axis-horizontal, .slider, .slide{
+	height:100%;
+	background-color: white;
+}
+#projectContent > div {
+	width:100%;
+}
+#projectContent > div > div:nth-child(2) {
+	display: none;
+}
+.thumbs-wrapper{
+	display: none;
+}
+.project{
+	background-color: white;
+	height:100%;
+	display:flex;
+	flex-wrap: wrap;
+  	justify-content: center;
+  	font-family: 'Lato', Arial, sans-serif;
+}
+.control-dots{
+	display: none;
+}
+/*DO NOT TOUCH THE ABOVE->SPENT SO MUCH TIME ADJUSTING THIS*/
+
+.projectTitleContainer{
+	width:100%;
+	height: 5vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.projectTitle{
+	font-family: 'Righteous', cursive;
+	margin: 0;
+	font-size:4vw;
+	text-transform: uppercase;
+}
+.projectImageContainer{
+	width:30%;
+}
+.projectImage{
+	width: auto;
+	height:100%;
+	object-fit: contain;
+}
+.projectInfoContainer {
+	width:70%;
+}
+.projectDescriptionContainer{
+	height:33%;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+.projectDescription{
+	margin: 0;
+	font-size:3vw;
+	width:80%;
+}
+.projectTechContainer{
+	height:33%;
+	padding:3px;
+	width:100%;
+	display:flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	list-style-type: none;
+	justify-content: center;
+
+}
+.techPiece{
+	height:4vw;
+	font-size:2vw;
+	background-color: grey;
+	padding:4px;
+	margin:5px;
+	border: 2px solid black;
+	border-radius: 12px;
+	background-color:#A5A5A5;
+	box-shadow: 2px 2px grey;
+}
+.buttonHolder{
+	height:33%;
+	width:100%;
+	text-align: center;
+}
+.demoButton{
+	font-size:3vw;
+	margin:auto;
+	padding:5px;
+	text-transform: uppercase;
+	width:35vw;
+	border-radius: 15px;
+	box-shadow: 2px 2px grey;
+	color: white;
+	background-color: black;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.link {
+	text-decoration: none;
+}
+
+.demoButton:hover{
+	background-color: #A49494;
+}
+.fluffer{
+	height:50%;
+	width:100%;
+}
+/*For Desktop*/
+@media  screen  and (min-width:800px){
+	.projectImageContainer{
+		width:40%;
+	}
+	.projectInfoContainer {
+		width:60%;
+		font-size:2vh;
+		text-align: justify;
+	}
+	.projectDescription{
+ 		font-size:2vw;
+	}
+	.projectDescriptionContainer{
+		height:50%;
+	}
+	.projectTechContainer{
+		height:25%;
+	}
+	.buttonHolder{
+		height:25%;
+	}
+}
+
+/*For mobile -Portrait Mode*/
+@media  screen  and (max-width:800px)  and (orientation: portrait) {
+	.projectTitle{
+		font-size:3vh;
+	}
+	.projectImageContainer{
+		height:45%;
+		width:100%;
+		text-align: center;
+	}
+	.projectInfoContainer {
+		width:100%;
+		height:50%;
+	}
+	.projectDescription{
+		font-size:3vh;
+		width:95%;
+	}
+	.techPiece{
+		height:4vh;
+		font-size:2vh;
+	}
+	.demoButton{
+		font-size:3vh;
+		margin:auto;
+		padding:5px;
+		text-transform: uppercase;
+		width:35vh;
+	}
+}
+
+
+
+

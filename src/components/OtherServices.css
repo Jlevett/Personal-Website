@@ -1,0 +1,14 @@
+#otherSection {
+	display:flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#otherSection  > div {
+	flex: 1;
+}
+#otherContent {
+	height:100%;
+	display: flex;
+	flex-wrap: wrap;
+}

@@ -1,76 +1,40 @@
 #skillSection {
+  display:flex;
+  flex-direction: column;
   height: 100vh;
 }
 
-
+#skillSection  > div {
+  flex: 1;
+}
 #skillContent {
-  height:95%;
-
- /* margin:auto;*/
+  height:100%;
   display: flex;
   flex-wrap: wrap;
-
-
-  justify-content: center;
+  width:98%;
+  margin-left: auto;
+  margin-right: auto;
   text-align:center;
-  align-content: center;
-
-
-
-   /*vertical-align: middle;*/
-
-
-
-  /*adding:5vh;*/
-}
-
-.iconContainer{
-/*  padding-top: 2vh ;
-  padding-bottom:2vh;
-  padding-right:2vw;
-  padding-left:2vw;*/
-
-
-  border: solid red;
-  height:50vh;
-  width:50vh;
-
-/*  justify-content: center;
-  align-content: center;
+  justify-content: center;
   vertical-align: middle;
-  text-align:center;*/
-
-}
-.iconImage {
-max-width:100%;
-max-height:100%;
-height: auto;
-width:auto;
 }
 
+.iconImage{
+  padding: 1vw;
+  min-height: 9vh;
+  min-width: 9vh;
+  height: 6.5vw;
+  width: 6.5vw;
+  max-height: 160px;
+  max-width: 190px;
+ }
 
 .icontTitle {
-  width:100%;
-  overflow-wrap: normal;
   font-family: 'Righteous', cursive;
-  font-size: 2vw;
+  font-size: calc(1.0vw + 6px);
   color:#F96170;
-
-
+  max-width:200px;
 }
-
-
-
- /*flex-shrink:1;/
-/*     width: 27%;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0 3%;
-    white-space: normal;*/
-
-/*
-
 @media screen and (min-width: 550px){
  .iconImage:hover {
    -webkit-filter: saturate(8);
@@ -81,17 +45,11 @@ width:auto;
 }
 @-webkit-keyframes iconbeat {
   to {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 }
 @keyframes iconbeat{
   to {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 }
-*//*  height:100%;*/
-/*  padding:1.2vw;
-
-  width: 14vw;
-  max-height: 150px;
-  max-width: 150px;*/

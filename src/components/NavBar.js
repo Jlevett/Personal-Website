@@ -14,13 +14,13 @@ class NavBar extends Component{
 		                <label className="luxbar-hamburger luxbar-hamburger-doublespin"
 		                id="luxbar-hamburger" htmlFor="luxbar-checkbox"> <span></span> </label>
 		            </li>
-							<li className="luxbar-item"><a href="#">HOME</a></li>
-				            <li className="luxbar-item"><a href="#">ABOUT</a></li>
-				            <li className="luxbar-item"><a href="#">SKILLS</a></li>
-				            <li className="luxbar-item"><a href="#">PROJECTS</a></li>
-				            <li className="luxbar-item"><a href="#">OTHER SKILLS</a></li>
-				            <li className="luxbar-item"><a href="#">INTERESTS</a></li>
-				            <li className="luxbar-item"><a href="#">CONTACT</a></li>
+							<li className="luxbar-item"><a href="">HOME</a></li>
+				            <li className="luxbar-item"><a href="">ABOUT</a></li>
+				            <li className="luxbar-item"><a href="">SKILLS</a></li>
+				            <li className="luxbar-item"><a href="">PROJECTS</a></li>
+				            <li className="luxbar-item"><a href="">OTHER SKILLS</a></li>
+				            <li className="luxbar-item"><a href="">INTERESTS</a></li>
+				            <li className="luxbar-item"><a href="">CONTACT</a></li>
         				</ul>
     				</div>
 				</header>

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 
-import profilephotoL from '../images/meL.jpg';
+import profilephotoL from '../images/L/me.jpg';
 
 import SectionTitle from "./smallcomponents/SectionTitle.js"
 
 import "./AboutSection.css";
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'grey'}}></div>;
 
 class AboutSection extends Component{
 

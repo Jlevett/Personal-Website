@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import DownArrow from './DownArrow.js';
+import ScrollAnimation from 'react-animate-on-scroll';
+import SectionTitle from "./smallcomponents/SectionTitle.js"
+import { Carousel } from 'react-responsive-carousel';
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "./OtherServices.css";
+
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'white'}}></div>;
 
 class OtherServices extends Component{
 
@@ -10,15 +15,21 @@ class OtherServices extends Component{
 
   render(){
   return(
-      <div id=''>
-        <div className=''>
-        HELLO THERE. IM THE SERVICES SECTIO
-        </div>
-        <DownArrow delayShow={2}/>
+      <div id='otherSection'>
+          {blankSectionBeforeTitle}
+          <SectionTitle name='Other Skills'/>
+        <div id="otherContent">
+          <Carousel emulateTouch  useKeyboardArrows  autoPlay>
 
+          </Carousel>
+        </div>
       </div>
   )}
 
 }
 export default OtherServices;
 
+
+ // <ScrollAnimation animateIn='lightSpeedIn' animateOut='lightSpeedOut'>
+
+ //   </ScrollAnimation>

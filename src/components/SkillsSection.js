@@ -23,46 +23,38 @@ import ay11 from "../images/icons/ay11.png";
 import api from "../images/icons/api.png";
 import ajax from "../images/icons/ajax.png";
 
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
+
 const icons = [react, reactrouter, es6, jquery, html5, css, js, api, jasmine, git, java, pwa, npm,
               webpack, gulp, ay11,  ajax, responsivedesign];
 const iconNames = ['REACT', 'REACT ROUTER','JS ES6', 'JQUERY', 'HTMLL5', 'CSS3', 'JAVASCRIPT',
                    'API','JASMINE TDD', 'GIT', 'JAVA','PROGRESSIVE WEB APP', 'NPM', 'WEBPACK', 'GULP', 'ACCESSIBILITY ',
                    'AJAX','RESPONSIVE DESIGN'];
-
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
 
 class SkillsSection extends Component{
 
   randomizeAnimation = ()=>{
-    const animationType = ['shake', 'bounce','tada','wobble', 'jello', 'swing','rubberBand'];
-    let random =Math.floor(Math.random() * animationType.length);
-    return animationType[random];
-  }
+                              const animationType = ['shake', 'bounce','tada','wobble', 'jello', 'swing','rubberBand'];
+                              let random =Math.floor(Math.random() * animationType.length);
+                              return animationType[random];
+                            }
 
   render(){
-
-
-  	return(
-  		<div id='skillSection'>
-          {blankSectionBeforeTitle}
-          <SectionTitle name='Software Skills'/>
-  				<div id='skillContent'>
-            {icons.map((icon,index)=>(
-              <div className='iconContainer' key={icon}>
-
-                       <img src={icon} alt ={iconNames[index]} className='iconImage' />
-
-                  <p className="icontTitle">{iconNames[index]}</p>
-              </div>
-            ))}
-        </div>
-
+    return(
+    <div id='skillSection'>
+      {blankSectionBeforeTitle}
+      <SectionTitle name='Software Skills'/>
+      <div id='skillContent'>
+        {icons.map((icon,index)=>(
+          <ScrollAnimation key={icon} initiallyVisible={true} animateIn={this.randomizeAnimation()}>
+          <img src={icon} alt ={iconNames[index]} className='iconImage' />
+          <p className="icontTitle">{iconNames[index]}</p>
+          </ScrollAnimation>
+        ))}
       </div>
-  )}
-
+    </div>
+    )
+  }
 }
-export default SkillsSection;
 
-// animateIn={this.randomizeAnimation()}
- // <ScrollAnimation initiallyVisible={true}>
- //  </ScrollAnimation>
+export default SkillsSection;
