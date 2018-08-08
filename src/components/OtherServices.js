@@ -25,10 +25,10 @@ class OtherServices extends Component{
               <ScrollAnimation animateIn='lightSpeedIn' animateOut='lightSpeedOut'>
                 <div id='otherskillcontainer'>
                   <p>I have award winning <br/> expertise in manufacturing:</p>
-                  <li>Idea, design to prototype</li>
-                  <li>Mechanical electronic design</li>
-                  <li>Compliance</li>
+                  <li>From idea to design to prototype</li>
                   <li>Prototype to mass production</li>
+                  <li>Mechatronics CAD design</li>
+                  <li>Compliance</li>
                   <li>Global regulatory approval</li>
                 </div>
               </ScrollAnimation>

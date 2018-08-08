@@ -24,11 +24,11 @@ class OutSideWork extends Component{
               <ScrollAnimation animateIn='fadeInRight' animateOut='fadeOutLeft'>
                 <div id='funcontainer'>
                   <p>Outside work, I like to:</p>
-                  <li>Rock Climb</li>
-                  <li>Slack Line</li>
+                  <li>Rock climb</li>
+                  <li>Slackline</li>
                   <li>Bike and Run</li>
                   <li>Snowboard</li>
-                  <li>Scuba Dive</li>
+                  <li>Scuba dive</li>
                   <li>Travel</li>
                 </div>
               </ScrollAnimation>
