@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import SectionTitle from "./smallcomponents/SectionTitle.js"
 import "./ProjectSection.css";
 
@@ -13,7 +12,7 @@ import project6 from '../images/L/feedreader.png';
 
 const projectImages = [project1, project2, project3, project4, project5, project6];
 
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white'}}></div>;
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white', 'zIndex':'-1'}}></div>;
 
 const projects =[
         {
@@ -85,7 +84,8 @@ class ProjectSection extends Component{
       {blankSectionBeforeTitle}
       <SectionTitle name='projects'/>
         <div id='projectContent'>
-          <Carousel emulateTouch  useKeyboardArrows  autoPlay>
+          <div>
+          <Carousel emulateTouch  useKeyboardArrows  autoPlay  infiniteLoop>
             {projects.map((project,index)=>(
               <div className='project' key={project+index}>
                 <img style={{'display':'none'}} alt=''/>
@@ -119,6 +119,7 @@ class ProjectSection extends Component{
             </div>
           ))}
         </Carousel>
+      </div>
       </div>
     </div>
   )}

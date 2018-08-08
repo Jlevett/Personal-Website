@@ -12,6 +12,10 @@
 	flex-wrap: wrap;
 	background-color: white;
 }
+#projectContent > div {
+	margin:auto;
+
+}
 .carousel, .carousel-slider, .slider-wrapper, .axis-horizontal, .slider, .slide{
 	height:100%;
 	background-color: white;
@@ -70,7 +74,7 @@
 }
 .projectDescription{
 	margin: 0;
-	font-size:3vw;
+	font-size:calc(5px + 1.7vw);/*3vw;*/
 	width:80%;
 }
 .projectTechContainer{
@@ -82,7 +86,6 @@
 	align-content: flex-start;
 	list-style-type: none;
 	justify-content: center;
-
 }
 .techPiece{
 	height:4vw;
@@ -125,7 +128,7 @@
 	width:100%;
 }
 /*For Desktop*/
-@media  screen  and (min-width:800px){
+@media  screen  and (min-width:650px){
 	.projectImageContainer{
 		width:40%;
 	}
@@ -149,7 +152,7 @@
 }
 
 /*For mobile -Portrait Mode*/
-@media  screen  and (max-width:800px)  and (orientation: portrait) {
+@media  only screen   and (max-width:650px)  and (orientation: portrait) {
 	.projectTitle{
 		font-size:3vh;
 	}
@@ -178,7 +181,4 @@
 		width:35vh;
 	}
 }
-
-
-
 

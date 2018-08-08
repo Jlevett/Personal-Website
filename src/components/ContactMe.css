@@ -1,0 +1,22 @@
+#contactSection {
+	display:flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#contactSection  > div {
+	flex: 1;
+}
+#conactContent {
+	height:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#profileImgContainer {
+	width:50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*font-family: 'Lato', Arial, sans-serif;*/

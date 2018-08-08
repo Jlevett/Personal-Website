@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import SectionTitle from "./smallcomponents/SectionTitle.js"
 
-import DownArrow from './DownArrow.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faReact} from '@fortawesome/free-brands-svg-icons';
+
+
+
+
 import "./ContactMe.css";
+
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
 
 class ContactMe extends Component{
 
-  method = ()=>{
-
-  }
-
   render(){
   	return(
-  		<div id=''>
-
-        <div className=''>
-        HELLO THERE. IM THE Contact Me section
+  	 <div id='contactSection'>
+        {blankSectionBeforeTitle}
+        <SectionTitle name='Contact Me Today'/>
+        <div id="conactContent">
+        <FontAwesomeIcon icon={faGithub}/>
+        <FontAwesomeIcon icon={faLinkedin}/>
+        jlevett@engineer.com
+        Built in react
+        <FontAwesomeIcon icon={faReact}/>
+          LinkedIN GitHub and email which opens email with a click.
+          BUBBLE IN THANKS
         </div>
-        <DownArrow delayShow={2}/>
-
       </div>
   )}
 

@@ -7,7 +7,7 @@ import profilephotoL from '../images/L/me.jpg';
 import SectionTitle from "./smallcomponents/SectionTitle.js"
 
 import "./AboutSection.css";
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'grey'}}></div>;
+const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
 
 class AboutSection extends Component{
 
