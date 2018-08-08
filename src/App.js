@@ -38,6 +38,6 @@ scroll or key down to get to next heading https://www.npmjs.com/package/react-sc
 hamburger menu closes after selection
 nav bar has contact details.
 image lazy progressive loading
-photos of climbing
-http://paletton.com/#uid=50x0t0kB0B0AZTrvGLruop6qAlu
+http://paletton.com/#uid=54q1d0kB0B0AZTrvGLruop6qAlu
+add draw down arrow on first page... delay till 5 seconds
 */

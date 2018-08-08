@@ -4,14 +4,16 @@ import SectionTitle from "./smallcomponents/SectionTitle.js"
 import { Carousel } from 'react-responsive-carousel';
 import "./OutsideWork.css";
 
-import products from '../images/L/otherskills.png';
-import otherskills from '../images/L/products.png';
+import climb from '../images/L/climb.jpeg';
+import travel from '../images/L/travel.png';
+import skydive from '../images/L/skydive.png';
 
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'white'}}></div>;
+
 
 class OutSideWork extends Component{
 
   render(){
+   const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'white'}}></div>;
     return(
       <div id='funSection'>
         {blankSectionBeforeTitle}
@@ -34,10 +36,13 @@ class OutSideWork extends Component{
             <div id='funCarousel'>
               <Carousel emulateTouch  useKeyboardArrows   autoPlay interval={2000} infiniteLoop >
                 <div className='funPhotoContainer'>
-                  <img className='projectImage' src={products} alt='products made'/>
+                  <img className='projectImage' src={climb} alt='climb'/>
                 </div>
                 <div className="funPhotoContainer">
-                  <img className='projectImage' src={otherskills} alt='other skills'/>
+                  <img className='projectImage' src={travel} alt='travel'/>
+                </div>
+                <div className="funPhotoContainer">
+                  <img className='projectImage' src={skydive} alt='skydive'/>
                 </div>
               </Carousel>
             </div>

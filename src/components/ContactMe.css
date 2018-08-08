@@ -3,20 +3,55 @@
 	flex-direction: column;
 	height: 100vh;
 }
-
 #contactSection  > div {
 	flex: 1;
 }
-#conactContent {
+#contactContent {
 	height:100%;
 	display: flex;
 	flex-wrap: wrap;
 }
-
-#profileImgContainer {
+.contactparttop{
+	height: 70%;
 	width:50%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center
 }
-/*font-family: 'Lato', Arial, sans-serif;*/
+.iconColor {
+	height:auto;
+	color:black;
+}
+.iconColor :hover {
+	color: grey;
+}
+.contactIcons {
+	font-size: 20vh;
+}
+.contactpartbottom{
+	height: 30%;
+	width:100%;
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 3vw;
+}
+.email {
+	width:100%;
+	height:5%;
+	text-align: center;
+
+}
+.emailLink {
+	text-decoration: none;
+	color: black;
+}
+.contactpartbottom :hover{
+	color: grey;
+}
+@media  screen  and (max-width:700px)  {
+	.emailLink {
+		font-size: 4vh;
+	}
+	.contactIcons {
+		font-size: 15vh;
+	}
+}

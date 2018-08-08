@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js'; //https://www.npmjs.com/package/react-particles-js
 import particlePropJson from '../json/particles.json';
 import Typist from 'react-typist';
-
+import DownArrow from './smallcomponents/DownArrow.js';
 import "./TitleSection.css";
 
 class TitleSection extends Component{
@@ -24,6 +24,7 @@ class TitleSection extends Component{
             <span> INSPIRE.</span>
           </Typist>
         </div>
+        <DownArrow/>
       </div>
     );
   }

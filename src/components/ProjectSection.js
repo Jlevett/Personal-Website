@@ -12,7 +12,7 @@ import project6 from '../images/L/feedreader.png';
 
 const projectImages = [project1, project2, project3, project4, project5, project6];
 
-const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white', 'zIndex':'-1'}}></div>;
+
 
 const projects =[
         {
@@ -79,13 +79,14 @@ class ProjectSection extends Component{
   }
 
   render(){
+    const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white', 'zIndex':'-1'}}></div>;
   	return(
     <div id='projectSection'>
       {blankSectionBeforeTitle}
       <SectionTitle name='projects'/>
         <div id='projectContent'>
           <div>
-          <Carousel emulateTouch  useKeyboardArrows  autoPlay  infiniteLoop>
+          <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2000}  infiniteLoop>
             {projects.map((project,index)=>(
               <div className='project' key={project+index}>
                 <img style={{'display':'none'}} alt=''/>

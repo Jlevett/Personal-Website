@@ -34,16 +34,17 @@
 }
 #otherskillcontainer{
 	font-size:calc(5px + 1.7vw);
-	margin:auto !important;
+	margin:auto;
 	font-family: 'Lato', Arial, sans-serif;
+	white-space: nowrap
 }
 #otherskillsCarousel {
 	width:49%;
 	height:90%;
 	display: flex;
 	align-items: center;
-}
 
+}
 @media only screen  and (max-width:600px)  and (orientation: portrait) {
 	#otherSkillsList {
 		width:100%;
