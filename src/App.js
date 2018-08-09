@@ -95,7 +95,7 @@ class App extends Component{
         return (
 
         <div >
-  <div class="parallax"></div>
+
             <NavBar scrollToSection = {this.scrollToSection} sections={this.state.sections}/>
     <Swipeable
         preventDefaultTouchmoveEvent={true}

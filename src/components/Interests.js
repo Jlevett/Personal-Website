@@ -14,7 +14,7 @@ class Interests extends Component{
 
   render(){
     //Not working correctly
-   const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
+   const blankSectionBeforeTitle = <div style={{maxHeight:'58px', 'background-color':'white'}}></div>;
     return(
       <div id='funSection'>
          {blankSectionBeforeTitle}

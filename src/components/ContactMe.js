@@ -30,7 +30,7 @@ class ContactMe extends Component{
   }
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'57px'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'57px','background-color':'white'}}></div>;
   	return(
       <div id='contactSection'>
         {blankSectionBeforeTitle}

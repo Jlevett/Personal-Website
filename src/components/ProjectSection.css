@@ -129,7 +129,7 @@
 	width:100%;
 }
 /*For Desktop*/
-@media  screen  and (min-width:650px){
+@media  screen  and (min-width:650px){  /*was 650*/
 /*	.projectImageContainer{
 		width:20%;
 	}*/
@@ -153,7 +153,7 @@
 }
 
 /*For mobile -Portrait Mode*/
-@media  only screen   and (max-width:650px)  and (orientation: portrait) {
+@media  only screen  and (max-width:500px)  and (orientation: portrait) {
 	.projectTitle{
 		font-size:3vh;
 	}

@@ -9,6 +9,7 @@ class TitleSection extends Component{
   render(){
     return (
       <div id='titlesection' >
+        <div class="parallax"></div>
         <Particles id='coveringCanvas' params={particlePropJson} height='100vh'/>
         <div id='title_container'>
           <h1 id='title'className='titleAnimation'>JEREMY<br/>LEVETT</h1>

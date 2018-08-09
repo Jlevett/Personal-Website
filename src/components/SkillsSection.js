@@ -41,7 +41,7 @@ class SkillsSection extends Component{
                             }
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'58px','background-color':'white'}}></div>;
     return(
     <div id='skillSection'>
       {blankSectionBeforeTitle}
