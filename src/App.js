@@ -13,6 +13,8 @@ import './App.css';
 import scrollToComponent from 'react-scroll-to-component';
 import "./components/NavBar.css";
 
+import Swipeable from 'react-swipeable';
+
 class App extends Component{
 
     state = {
@@ -22,7 +24,62 @@ class App extends Component{
             }
 
     componentDidMount() {
+
         scrollToComponent(this.home, {duration: 500, ease:'inCirc'});
+          let that = this;
+
+        /*Prevent zoom in and out*/
+          window.addEventListener("wheel", e=>{
+            if(e.ctrlKey)
+              e.preventDefault();
+          });
+
+          /*Detect wheel scroll direction*/
+          window.addEventListener('wheel', function(e){
+                e.preventDefault();
+                if(!e.ctrlKey){
+                    if (e.deltaY < 0) {
+                        that.scrollUpToPreviousSection();
+                      }
+                      if (e.deltaY > 0) {
+                        console.log('scrolling down');
+                        that.scrollDownToNextSection();
+                      }
+              }
+          });
+
+          /*Detect if a key is pressed*/
+
+          window.addEventListener('keyup', function(e){
+            that.keyPressed(e);
+          });
+
+     }
+     /*
+     *Changes current section
+     */
+
+     keyPressed = (e) =>{
+           if(e.keyCode===38){
+            e.preventDefault();
+            this.scrollUpToPreviousSection();
+           }
+
+             if(e.keyCode===40){
+            e.preventDefault();
+              this.scrollDownToNextSection();
+             }
+     }
+
+     scrollUpToPreviousSection = () => {
+        if(this.state.currentSection -1 >= 0 )
+          this.scrollToSection(this.state.currentSection -1)
+     }
+
+     scrollDownToNextSection = () => {
+        let sectionsTotal = this.state.sections.length;
+        if(this.state.currentSection + 1  <= (this.state.sections.length - 1) )
+          this.scrollToSection(this.state.currentSection +1)
      }
 
     scrollToSection =(section)=>{
@@ -37,8 +94,15 @@ class App extends Component{
 
     render(){
         return (
-        <div>
+
+        <div >
+
             <NavBar scrollToSection = {this.scrollToSection} sections={this.state.sections}/>
+    <Swipeable
+        preventDefaultTouchmoveEvent={true}
+        onSwipedDown={()=>{this.scrollUpToPreviousSection()}}
+        onSwipedUp={()=>{this.scrollDownToNextSection()}}
+    >
             <TitleSection ref={(section) => { this.home = section;}} downArrowClick={this.ontitlePageDownArrowClick}/>
             <AboutSection ref={(section) => { this.about = section;}}/>
             <SkillsSection ref={(section) => { this.skills = section; }}/>
@@ -46,21 +110,24 @@ class App extends Component{
             <OtherSkills ref={(section) => { this.otherSkills = section; }}/>
             <Interests ref={(section) => { this.interests = section; }}/>
             <ContactMe ref={(section) => { this.contact = section; }}/>
+           </Swipeable>
+
         </div>
+
+
         );
     };
 
 }
+//
 
 export default App;
+// Parallax Scrolling
 
-//The arrow clicked goes to about
-//TOuch pull down, touch pull up, scroll down, scroll up, key down, key up auto scrolls.
-//Move this stuff into the nav bar section.
 //look up bind,apply,call to get rid of let that=this....
-
-//hamburger menu closes after selection
-//nav bar has contact details.
+//tidy and code up
 //image lazy progressive loading
-//http://paletton.com/#uid=54q1d0kB0B0AZTrvGLruop6qAlu
-//add draw down arrow on first page... delay till 5 seconds
+//minimize the screen size.
+
+
+//parrallex effect....

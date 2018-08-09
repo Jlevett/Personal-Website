@@ -22,6 +22,7 @@
 }
 #projectContent > div {
 	width:100%;
+	cursor: grabbing;
 }
 #projectContent > div > div:nth-child(2) {
 	display: none;

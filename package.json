@@ -27,6 +27,8 @@
     "react-scroll-to-component": "^1.0.2",
     "react-scrolling-color-background": "^1.0.2",
     "react-slick": "^0.23.1",
+    "react-swipeable": "^4.3.0",
+    "react-touch": "^0.4.4",
     "react-typist": "^2.0.4",
     "slick-carousel": "^1.8.1"
   },
