@@ -5,14 +5,14 @@ body {
 }
 
 
-/*.parallax {
+.parallax {
     background-image: url("https://images.unsplash.com/photo-1463412855783-af97e375664b?iq=100&fm=jpg&w=1000");
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}*/
+}
 /*
 body, html {
     height: 100%;

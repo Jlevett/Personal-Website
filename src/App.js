@@ -42,7 +42,6 @@ class App extends Component{
                         that.scrollUpToPreviousSection();
                       }
                       if (e.deltaY > 0) {
-                        console.log('scrolling down');
                         that.scrollDownToNextSection();
                       }
               }
@@ -96,7 +95,7 @@ class App extends Component{
         return (
 
         <div >
-
+  <div class="parallax"></div>
             <NavBar scrollToSection = {this.scrollToSection} sections={this.state.sections}/>
     <Swipeable
         preventDefaultTouchmoveEvent={true}
