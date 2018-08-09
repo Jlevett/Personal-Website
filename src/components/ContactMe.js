@@ -57,7 +57,7 @@ class ContactMe extends Component{
                className='emailLink'
                target="_blank"
                rel="noopener noreferrer"
-               href="mailto:jlevett@engineer.com?subject=G'day&body=Thank%20you%20for%20wanting%20to%20send%20an%20email%20to%20me.%20Please%20let%20me%20know%20what%20you%20need%20help%20with.%0D%0A%0D%0ACheers,%20Jeremy."
+               href="mailto:jlevett@engineer.com?subject=G'day&body=Thanks%20for%20getting%20in%20touch.%0D%0A%0D%0ACheers,%20Jeremy."
                >
                 jlevett@engineer.com
               </a>

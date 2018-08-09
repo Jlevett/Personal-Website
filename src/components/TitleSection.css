@@ -1,5 +1,6 @@
 #titlesection {
   height:100vh;
+  background-color: transparent !important;
 }
 #title_container {
   z-index: 1;
@@ -9,6 +10,13 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/*FOllowing added for parallax - can be deleted if need be*/
+/*#coveringCanvas {
+  position: relative;
+  z-index: 2;
+}
+*/
+
 #title{
   display: inline-block;
   font-family: 'Knewave', cursive;
