@@ -12,7 +12,7 @@ import "./AboutSection.css";
 class AboutSection extends Component{
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'59px'}}></div>;
     return(
       <div id='aboutSection'>
           {blankSectionBeforeTitle}

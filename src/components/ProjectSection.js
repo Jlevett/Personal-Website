@@ -48,7 +48,7 @@ const projects =[
           name:'Matching Game',
           link:'https://jlevett.github.io/Memory-Game-Project/',
           tech: ['CSS3', 'HTML5', 'JS'],
-          long:'This is a classic memory game tester. Working with time and the least amount of moves, find each matching card (to complete a pair). To win, repeat until all cards are revealed.',
+          long:'This is a memory game tester. Working with time and the least amount of moves, find each matching card (to complete a pair). To win, repeat until all cards are revealed.',
           short:'This is a classic memory game tester.  To win, repeat until all cards are revealed'
         },
         {
@@ -86,7 +86,7 @@ class ProjectSection extends Component{
       <SectionTitle name='projects'/>
         <div id='projectContent'>
           <div>
-          <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2000}  infiniteLoop>
+          <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2000} >
             {projects.map((project,index)=>(
               <div className='project' key={project+index}>
                 <img style={{'display':'none'}} alt=''/>
@@ -100,7 +100,7 @@ class ProjectSection extends Component{
                 <div className='projectDescriptionContainer'>
                   <p className='projectDescription'>
                     {this.state.innerWidth<800
-                    ?   project.short: this.state.innerHeight<680
+                    ?   project.short: this.state.innerHeight<380
                     ?   project.short : project.long}
                   </p>
                 </div>

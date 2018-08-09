@@ -8,7 +8,7 @@ import "./TitleSection.css";
 class TitleSection extends Component{
   render(){
     return (
-      <div id='titlesection'>
+      <div id='titlesection' >
         <Particles  params={particlePropJson} height='100vh'/>
         <div id='title_container'>
           <h1 id='title'className='titleAnimation'>JEREMY<br/>LEVETT</h1>
@@ -24,7 +24,7 @@ class TitleSection extends Component{
             <span> INSPIRE.</span>
           </Typist>
         </div>
-        <DownArrow/>
+        <DownArrow click={this.props.downArrowClick}/>
       </div>
     );
   }

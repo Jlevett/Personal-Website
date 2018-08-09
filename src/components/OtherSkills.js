@@ -3,18 +3,20 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import SectionTitle from "./smallcomponents/SectionTitle.js"
 import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import "./OtherServices.css";
+import "./OtherSkills.css";
 
-
+import smoker from '../images/L/smoker.png';
+import press from '../images/L/press.png';
+import printer from '../images/L/printer.png';
+import pro from '../images/L/pro.png';
 import otherskills from '../images/L/otherskills.png';
 import products from '../images/L/products.png';
+// Might want to put these in later
 
-
-
-class OtherServices extends Component{
+class OtherSkills extends Component{
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'white'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
     return(
       <div id='otherSection'>
         {blankSectionBeforeTitle}
@@ -24,23 +26,26 @@ class OtherServices extends Component{
             <div id='otherSkillsList'>
               <ScrollAnimation animateIn='lightSpeedIn' animateOut='lightSpeedOut'>
                 <div id='otherskillcontainer'>
-                  <p>I have award winning <br/> expertise in manufacturing:</p>
+                  <p>I have expertise in manufacturing<br/>
+                  products, start to finish:</p>
                   <li>From idea to design to prototype</li>
                   <li>Prototype to mass production</li>
-                  <li>Mechatronics CAD design</li>
+                  <li>Mechanical and electronic design</li>
                   <li>Compliance</li>
                   <li>Global regulatory approval</li>
                 </div>
               </ScrollAnimation>
             </div>
             <div id='otherskillsCarousel'>
-              <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2000} infiniteLoop >
+              <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2500} infiniteLoop >
                  <div className='otherSkillPhotoContainer'>
                    <img className='projectImage' src={products} alt='other skills'/>
                   </div>
                   <div className="otherSkillPhotoContainer">
                     <img className='projectImage' src={otherskills} alt='products made'/>
                   </div>
+
+
               </Carousel>
              </div>
           </div>
@@ -50,4 +55,4 @@ class OtherServices extends Component{
   }
 }
 
-export default OtherServices;
+export default OtherSkills;

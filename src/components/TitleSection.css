@@ -4,7 +4,7 @@
 #title_container {
   z-index: 1;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -15,7 +15,7 @@
   color:#FF1800;
   font-size: 14vw;
   opacity: 0.6;
-  line-height: 17vw;
+  line-height: 14vw;
   display: inline-block;
   margin-bottom: 0;
 }

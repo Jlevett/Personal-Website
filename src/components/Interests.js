@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import SectionTitle from "./smallcomponents/SectionTitle.js"
 import { Carousel } from 'react-responsive-carousel';
-import "./OutsideWork.css";
+import "./Interests.css";
 
 import climb from '../images/L/climb.jpeg';
 import travel from '../images/L/travel.png';
@@ -10,14 +10,15 @@ import skydive from '../images/L/skydive.png';
 
 
 
-class OutSideWork extends Component{
+class Interests extends Component{
 
   render(){
-   const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'white'}}></div>;
+    //Not working correctly
+   const blankSectionBeforeTitle = <div style={{maxHeight:'59px'}}></div>;
     return(
       <div id='funSection'>
-        {blankSectionBeforeTitle}
-        <SectionTitle name='Outside Work'/>
+         {blankSectionBeforeTitle}
+        <SectionTitle name='Interests'/>
         <div id="funContent">
           <div id='infunContent'>
             <div id='funList'>
@@ -53,4 +54,4 @@ class OutSideWork extends Component{
   }
 }
 
-export default OutSideWork;
+export default Interests;

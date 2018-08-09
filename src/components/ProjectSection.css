@@ -129,9 +129,9 @@
 }
 /*For Desktop*/
 @media  screen  and (min-width:650px){
-	.projectImageContainer{
-		width:40%;
-	}
+/*	.projectImageContainer{
+		width:20%;
+	}*/
 	.projectInfoContainer {
 		width:60%;
 		font-size:2vh;

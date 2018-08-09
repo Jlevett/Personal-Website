@@ -9,7 +9,7 @@ class DownArrow extends Component{
 render(){
       return (
       <div className="arrowContainer">
-        <div className='arrowHolder'>
+        <div className='arrowHolder' onClick ={()=>this.props.click()}>
             <FontAwesomeIcon icon={faAngleDoubleDown}/>
         </div>
       </div>

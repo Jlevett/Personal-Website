@@ -23,7 +23,7 @@
 	color:black;
 }
 .iconColor :hover {
-	color: grey;
+	color: #A49494;
 }
 .contactIcons {
 	font-size: 20vh;
@@ -45,7 +45,7 @@
 	color: black;
 }
 .contactpartbottom :hover{
-	color: grey;
+	color: #A49494;
 }
 @media  screen  and (max-width:700px)  {
 	.emailLink {
@@ -53,5 +53,26 @@
 	}
 	.contactIcons {
 		font-size: 15vh;
+	}
+}
+
+@media  screen  and (min-width:750px)  {
+	.email:hover {
+		-webkit-animation: contactBeat 1s infinite alternate;
+    	animation: contactBeat 1s infinite alternate;
+	}
+	.contactIcons:hover {
+		-webkit-animation: contactBeat 1s infinite alternate;
+    	animation: contactBeat 1s infinite alternate;
+	}
+	@-webkit-keyframes contactBeat {
+	  to {
+	    transform: scale(1.2);
+	  }
+	}
+	@keyframes contactBeat{
+	  to {
+	    transform: scale(1.2);
+	  }
 	}
 }

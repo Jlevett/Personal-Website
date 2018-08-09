@@ -35,7 +35,7 @@ const iconNames = ['REACT', 'REACT ROUTER','JS ES6', 'JQUERY', 'HTMLL5', 'CSS3',
 class SkillsSection extends Component{
 
   randomizeAnimation = ()=>{
-                              const animationType = ['shake', 'bounce','tada','wobble', 'jello', 'swing','rubberBand'];
+                              const animationType = ['shake','tada','wobble', 'jello', 'swing','rubberBand'];
                               let random =Math.floor(Math.random() * animationType.length);
                               return animationType[random];
                             }
@@ -48,7 +48,7 @@ class SkillsSection extends Component{
       <SectionTitle name='Software Skills'/>
       <div id='skillContent'>
         {icons.map((icon,index)=>(
-          <ScrollAnimation key={icon} initiallyVisible={true} animateIn={this.randomizeAnimation()}>
+         <ScrollAnimation key={icon} initiallyVisible={true} animateIn={this.randomizeAnimation()}>
           <img src={icon} alt ={iconNames[index]} className='iconImage' />
           <p className="icontTitle">{iconNames[index]}</p>
           </ScrollAnimation>

@@ -5,7 +5,8 @@
   text-align: center;
   visibility: hidden;
   animation: bounce 2s infinite;
-  animation-delay: 5s;
+  animation-delay: 0s;
+  /*5s*/
   position: absolute;
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@
 }
 /*Hide arrow on mobile device potrait mode*/
 @media screen and (max-width: 550px){
-  .arrowContainer {
-    display: none;
+  .arrowHolder > * {
+    font-size: 3vh;
   }
 }

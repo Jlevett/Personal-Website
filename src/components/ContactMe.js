@@ -30,20 +30,20 @@ class ContactMe extends Component{
   }
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'57px'}}></div>;
   	return(
       <div id='contactSection'>
         {blankSectionBeforeTitle}
         <SectionTitle name='Contact Me Today'/>
         <div id="contactContent">
-          <div className='contactparttop'>
+          <div className='contactparttop' key={'linkedin'}>
             <a href='https://www.linkedin.com/in/jeremylevett/' target="_blank" className="iconColor"  rel="noopener noreferrer" >
               <ScrollAnimation animateIn='flip' animateOut='fadeOutLeft'>
                 <FontAwesomeIcon icon={faLinkedin} className='contactIcons'/>
               </ScrollAnimation>
             </a>
           </div>
-          <div className='contactparttop'>
+          <div className='contactparttop' key={'github'}>
             <a href='https://github.com/Jlevett' target="_blank" className="iconColor"  rel="noopener noreferrer" >
               <ScrollAnimation animateIn='flip' animateOut='fadeOutRight'>
                 <FontAwesomeIcon icon={faGithub} className='contactIcons'/>
