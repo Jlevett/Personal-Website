@@ -7,3 +7,48 @@ body {
 body, html {
     height: 100%;
 }
+
+/*Master CSS Colors*/
+
+:root {
+	/*Title Section*/
+	  --titleJeremyLevett: #FF1800;
+	  --subtitleJeremyLevett:black;
+	  --downArrow:#006255;
+	  --titlespacer:transparent;
+	  --backgroundTitlePage:transparent;
+	/*About*/
+		--aboutBackground:#79BDB4;
+	/*Software Skills*/
+		--skillsBackground: #79BDB4;
+		--skillText:#F96170;
+	/*Projects*/
+		--projectsBackground: #79BDB4;
+		--projectTitle: black;
+		--techPiece:#A5A5A5;
+		--openAppText:black;
+		--openApp:#006255;
+		--openAppHover:#007C6B;
+
+	/*Other Skills*/
+		--otherBackground: #79BDB4;
+	/*Outside Work*/
+		--interestsBackground: #79BDB4;
+	/*Contact Me*/
+		--contactBackground:transparent;
+		--hoverIconsContact: #F73749;
+		--iconsContact:black;
+		--emailCopied: #F73749 ;
+	/*Section General*/
+	--sectionTitle:#F73749;
+	--sectionBackground:#FFB839;
+	--sectionTitleSpacers:#79BDB4;
+}
+
+/*
+#006255  dark green
+#FFB839 orange
+#F73749 red
+#007C6B slightly lighter blue
+#79BDB4 background blue
+*/

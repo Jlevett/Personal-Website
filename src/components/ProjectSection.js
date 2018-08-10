@@ -79,7 +79,7 @@ class ProjectSection extends Component{
   }
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px', backgroundColor:'white', 'zIndex':'-1'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'58px','backgroundColor':'var(--sectionTitleSpacers)'}}></div>;
   	return(
     <div id='projectSection'>
       {blankSectionBeforeTitle}

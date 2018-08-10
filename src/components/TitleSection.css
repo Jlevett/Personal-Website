@@ -1,6 +1,6 @@
 #titlesection {
   height:100vh;
-  background-color: transparent !important;
+  background-color: var(--backgroundTitlePage) !important;
 }
 #title_container {
   z-index: 1;
@@ -17,8 +17,6 @@
 .parallax {
   width:100%;
   height:100%;
-  background-image: url("https://cdn.pixabay.com/photo/2017/09/16/16/09/sea-2755908_960_720.jpg");
-  min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +30,7 @@
 #title{
   display: inline-block;
   font-family: 'Knewave', cursive;
-  color:#FF1800;
+  color:var(--titleJeremyLevett);
   font-size: 14vw;
   opacity: 0.6;
   line-height: 14vw;
@@ -40,7 +38,7 @@
   margin-bottom: 0;
 }
 .subtitle {
-  color:black;
+  color:var(--subtitleJeremyLevett);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: bold;
   font-size:6vw;
@@ -55,13 +53,13 @@
 @-webkit-keyframes beat {
   to {
     transform: scale(1.06);
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 @keyframes beat{
   to {
     transform: scale(1.06);
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 @media screen and (max-width: 550px){

@@ -21,7 +21,7 @@
 
 }
 .arrowHolder > * {
-  color:black;
+  color:var(--downArrow);
   font-size: 3vw;
 }
 
@@ -42,6 +42,6 @@
 /*Hide arrow on mobile device potrait mode*/
 @media screen and (max-width: 550px){
   .arrowHolder > * {
-    font-size: 3vh;
+    font-size: 4vh;
   }
 }

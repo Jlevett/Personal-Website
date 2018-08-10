@@ -30,7 +30,7 @@ class ContactMe extends Component{
   }
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'57px','background-color':'white'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'57px','backgroundColor':'var(--sectionTitleSpacers)'}}></div>;
   	return(
       <div id='contactSection'>
         {blankSectionBeforeTitle}
@@ -63,7 +63,7 @@ class ContactMe extends Component{
               </a>
             </div>
             <div className ='email'>
-              <p   className='emailLink' style={{'color':'green'}} >{this.state.textCopied ? 'Email copied to clipboard':null }</p>
+              <p   className='emailLink' style={{'color':'var(--emailCopied)'}} >{this.state.textCopied ? 'Email copied to clipboard':null }</p>
             </div>
           </div>
         </div>

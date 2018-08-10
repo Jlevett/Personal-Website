@@ -47,8 +47,12 @@ class App extends Component{
               }
           });
 
-          /*Detect if a key is pressed*/
-
+         // Key press is not in
+          window.addEventListener('keydown', function(e){
+           if(e.keyCode===38 ||e.keyCode===40 )
+             e.preventDefault();
+          });
+ /*Detect if a key is pressed*/
           window.addEventListener('keyup', function(e){
             that.keyPressed(e);
           });

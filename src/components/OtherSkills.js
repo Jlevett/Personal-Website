@@ -10,13 +10,13 @@ import press from '../images/L/press.png';
 import printer from '../images/L/printer.png';
 import pro from '../images/L/pro.png';
 import otherskills from '../images/L/otherskills.png';
-import products from '../images/L/products.png';
+// import products from '../images/L/products.png';
 // Might want to put these in later
 
 class OtherSkills extends Component{
 
   render(){
-    const blankSectionBeforeTitle = <div style={{maxHeight:'58px', 'background-color':'white'}}></div>;
+    const blankSectionBeforeTitle = <div style={{maxHeight:'58px', 'backgroundColor':'var(--sectionTitleSpacers)'}}></div>;
     return(
       <div id='otherSection'>
         {blankSectionBeforeTitle}
@@ -39,7 +39,16 @@ class OtherSkills extends Component{
             <div id='otherskillsCarousel'>
               <Carousel emulateTouch  useKeyboardArrows  autoPlay interval={2500} infiniteLoop >
                  <div className='otherSkillPhotoContainer'>
-                   <img className='projectImage' src={products} alt='other skills'/>
+                   <img className='projectImage' src={smoker} alt='other skills'/>
+                  </div>
+                 <div className='otherSkillPhotoContainer'>
+                   <img className='projectImage' src={press} alt='other skills'/>
+                  </div>
+                 <div className='otherSkillPhotoContainer'>
+                   <img className='projectImage' src={printer} alt='other skills'/>
+                  </div>
+                 <div className='otherSkillPhotoContainer'>
+                   <img className='projectImage' src={pro} alt='other skills'/>
                   </div>
                   <div className="otherSkillPhotoContainer">
                     <img className='projectImage' src={otherskills} alt='products made'/>

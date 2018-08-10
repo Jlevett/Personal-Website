@@ -2,7 +2,7 @@
   display:flex;
   flex-direction: column;
   height: 100vh;
-  background-color: white;
+  background-color: var(--skillsBackground);
 }
 
 #skillSection  > div {
@@ -37,10 +37,10 @@
 .icontTitle {
   font-family: 'Righteous', cursive;
   font-size: calc(1.0vw + 6px);
-  color:#F96170;
+  color:var(--skillText);
   max-width:200px;
 }
-@media screen and (min-width: 550px){
+@media (pointer:fine) {
  .iconImage:hover {
    -webkit-filter: saturate(8);
    filter: saturate(8);
