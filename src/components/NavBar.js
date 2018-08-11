@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import "./NavBar.css";
+import PropTypes from 'prop-types';
 import "./smallcomponents/LuxBar.css"
+
+import "./NavBar.css";
+
 
 class NavBar extends Component{
 
@@ -11,7 +14,6 @@ class NavBar extends Component{
 
 	render(){
 		return (
-
 			<header id="luxbar" className="luxbar-fixed">
 			    <input type="checkbox" className="luxbar-checkbox" id="luxbar-checkbox"/>
 			     <div className="luxbar-menu luxbar-menu-left luxbar-menu-dark">
@@ -20,22 +22,27 @@ class NavBar extends Component{
 			                <label className="luxbar-hamburger luxbar-hamburger-doublespin"
 			                id="luxbar-hamburger" htmlFor="luxbar-checkbox" > <span></span> </label>
 			            </li>
-			            {this.props.sections.map((section, index)=>
+			            {this.props.sections.map((section, index) =>
 				         <li className="luxbar-item" key={section}>
 		                    <a
-		         			onClick={()=>{this.props.scrollToSection(index); this.closeNavAfterClick();}}>
+		         			onClick={()=>{
+		         				this.props.scrollToSection(index);
+		         				this.closeNavAfterClick();}}
+		         			>
 		                    {section}
 		                    </a>
 		                </li>
 			            )}
 			        </ul>
-			        </div>
-			    </header>
-	     )
+			    </div>
+			</header>
+	    )
 	}
 }
 
 export default NavBar;
 
-
-
+NavBar.propTypes = {
+        smallProfilePhoto: PropTypes.string,
+        sections: PropTypes.array
+    }

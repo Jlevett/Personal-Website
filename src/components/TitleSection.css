@@ -1,22 +1,20 @@
 #titlesection {
-  height:100vh;
-  background-color: var(--backgroundTitlePage) !important;
+  height: 100vh;
+  background-color: transparent;
 }
 #title_container {
   z-index: 1;
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
 }
-
-
-
-/*optional delete if need be*/
 .parallax {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,51 +22,52 @@
   z-index: -1;
   position: fixed;
 }
-
-
-
-#title{
+#title {
   display: inline-block;
-  font-family: 'Knewave', cursive;
-  color:var(--titleJeremyLevett);
+  font-family: 'Gruppo', cursive;
+  color: #FF1800;
   font-size: 14vw;
   opacity: 0.6;
   line-height: 14vw;
   display: inline-block;
   margin-bottom: 0;
+  text-shadow: 4px 4px 4px #000;
 }
 .subtitle {
-  color:var(--subtitleJeremyLevett);
-  font-family: 'Fira Sans Condensed', sans-serif;
+  color: black;
+  font-family: 'Text Me One', sans-serif;
   font-weight: bold;
-  font-size:6vw;
+  font-size: 6vw;
   white-space: nowrap;
 }
 .titleAnimation {
   -webkit-animation: beat 3s infinite alternate;
   -webkit-animation-delay: 10s;
   animation: beat 3s infinite alternate;
-  animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 @-webkit-keyframes beat {
   to {
-    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
     opacity: 0.8;
   }
 }
-@keyframes beat{
+@keyframes beat {
   to {
-    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
     opacity: 0.8;
   }
 }
-@media screen and (max-width: 550px){
-  #title{
+@media screen and (max-width: 550px) {
+  #title {
     font-size: 10vh;
     line-height: 12vh;
 
   }
   .subtitle {
-    font-size:4vh;
+    font-size: 4vh;
   }
 }

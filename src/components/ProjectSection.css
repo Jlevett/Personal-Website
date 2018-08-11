@@ -1,185 +1,266 @@
 #projectSection {
-	display:flex;
-	flex-direction: column;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	height: 100vh;
 }
-#projectSection  > div {
-	flex: 1;
+#projectSection > div {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 #projectContent {
-	height:100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	background-color: var(--projectsBackground);
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	background-color: #79BDB4;
 }
 #projectContent > div {
-	margin:auto;
-
+	margin: auto;
 }
-.carousel, .carousel-slider, .slider-wrapper, .axis-horizontal, .slider, .slide{
-	height:100%;
-	background-color: var(--projectsBackground);
+.carousel, .carousel-slider, .slider-wrapper, .axis-horizontal, .slider, .slide {
+	height: 100%;
+	background-color: #79BDB4;
 }
 #projectContent > div {
-	width:100%;
+	width: 100%;
+	cursor: -webkit-grabbing;
 	cursor: grabbing;
 }
 #projectContent > div > div:nth-child(2) {
 	display: none;
 }
-.thumbs-wrapper{
+.thumbs-wrapper {
 	display: none;
 }
-.project{
-	background-color: var(--projectsBackground);	height:100%;
-	display:flex;
-	flex-wrap: wrap;
-  	justify-content: center;
+.project {
+	background-color: #79BDB4;
+	height:100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+  	-webkit-box-pack: center;
+  	    -ms-flex-pack: center;
+  	        justify-content: center;
   	font-family: 'Lato', Arial, sans-serif;
 }
-.control-dots{
+.control-dots {
 	display: none;
 }
-/*DO NOT TOUCH THE ABOVE->SPENT SO MUCH TIME ADJUSTING THIS*/
-
-.projectTitleContainer{
-	width:100%;
-	height: 5vw;
+.projectTitleContainer {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
-.projectTitle{
+.projectTitle {
 	font-family: 'Righteous', cursive;
+	  text-shadow: 2px 2px 2px #000;
+
 	margin: 0;
-	font-size:4vw;
+	font-size: 4vw;
 	text-transform: uppercase;
-	color:var(--projectTitle);
+	color: #F73749;
+	padding-bottom: 10px ;
 }
-.projectImageContainer{
-	width:30%;
+.projectImageContainer {
+	width: 30%;
 }
-.projectImage{
+.projectImage {
 	width: auto;
-	height:100%;
-	object-fit: contain;
+	height: 100%;
+	-o-object-fit: contain;
+	   object-fit: contain;
 }
 .projectInfoContainer {
-	width:70%;
+	width: 70%;
 }
-.projectDescriptionContainer{
-	height:33%;
+.projectDescriptionContainer {
+	height: 33%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
-.projectDescription{
+.projectDescription {
 	margin: 0;
-	font-size:calc(5px + 1.7vw);/*3vw;*/
-	width:80%;
+	font-size: calc(5px + 1.7vw);
+	width: 80%;
 }
-.projectTechContainer{
-	height:33%;
-	padding:3px;
-	width:100%;
-	display:flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
+.projectTechContainer {
+	height: 33%;
+	padding: 3px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 	list-style-type: none;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
-.techPiece{
-	height:4vw;
-	font-size:2vw;
-	padding:4px;
-	margin:5px;
+.techPiece {
+	height: 4vw;
+	font-size: 2vw;
+	padding: 4px;
+	margin: 5px;
 	border: 2px solid black;
 	border-radius: 12px;
-	background-color: var(--techPiece);
-	box-shadow: 2px 2px grey;
+	background-color: #A5A5A5;
+	-webkit-box-shadow: 2px 2px grey;
+	        box-shadow: 2px 2px grey;
 }
-.buttonHolder{
-	height:33%;
-	width:100%;
+.buttonHolder {
+	height: 33%;
+	width: 100%;
 	text-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 15px;
 }
-.demoButton{
-	font-size:3vw;
-	margin:auto;
-	padding:5px;
+.demoButton {
+	display: inline;
+	font-size: 3vw;
+	margin: auto;
+	padding: 5px;
+	padding-left:20px;
+	padding-right:20px;
 	text-transform: uppercase;
-	width:35vw;
+	width: 35vw;
 	border-radius: 15px;
-	box-shadow: 2px 2px grey;
-	color: var(--openAppText);
-	background-color: var(--openApp);
+	color: #FFB839;
+	background-color: #006255;
 	text-transform: uppercase;
 	cursor: pointer;
 }
 .link {
 	text-decoration: none;
 }
-@media (pointer:fine) {
-	.demoButton:hover{
-		background-color: var(--openAppHover);
-	}
-}
-.fluffer{
-	height:50%;
-	width:100%;
+.fluffer {
+	height: 50%;
+	width: 100%;
 }
 /*For Desktop*/
-@media  screen  and (min-width:650px){  /*was 650*/
-/*	.projectImageContainer{
-		width:20%;
-	}*/
+@media  screen  and (min-width: 650px) {
 	.projectInfoContainer {
-		width:60%;
-		font-size:2vh;
+		width: 60%;
+		font-size: 2vh;
 		text-align: justify;
 	}
-	.projectDescription{
- 		font-size:2vw;
+	.projectDescription {
+ 		font-size: 2vw;
 	}
-	.projectDescriptionContainer{
-		height:50%;
+	.projectDescriptionContainer {
+		height: 50%;
 	}
-	.projectTechContainer{
-		height:25%;
+	.projectTechContainer {
+		height: 25%;
 	}
-	.buttonHolder{
-		height:25%;
+	.buttonHolder {
+		height: 25%;
 	}
 }
-
-/*For mobile -Portrait Mode*/
-@media  only screen  and (max-width:500px)  and (orientation: portrait) {
-	.projectTitle{
-		font-size:3vh;
+@media (pointer: fine) {
+	.demoButton:hover{
+		background-color: #007C6B;
 	}
-	.projectImageContainer{
-		height:45%;
-		width:100%;
+}
+/*For mobile -Portrait Mode*/
+@media  only screen  and (max-width: 600px)  and (orientation: portrait) {
+	.projectTitle{
+		font-size: 3vh;
+	}
+	.projectImageContainer {
+		height: 45%;
+		width: 100%;
 		text-align: center;
 	}
 	.projectInfoContainer {
-		width:100%;
-		height:50%;
+		width: 100%;
+		height: 50%;
 	}
-	.projectDescription{
-		font-size:3vh;
-		width:95%;
+	.projectDescription {
+		font-size: 3vh;
+		width: 95%;
 	}
-	.techPiece{
-		height:4vh;
-		font-size:2vh;
+	.techPiece {
+		height: 4vh;
+		font-size: 2vh;
 	}
-	.demoButton{
-		font-size:3vh;
-		margin:auto;
-		padding:5px;
+	.demoButton {
+		font-size: 3vh;
+		margin: auto;
+		padding: 5px;
 		text-transform: uppercase;
-		width:35vh;
+		width: 35vh;
+	}
+	/*For Apple iphones*/
+	@supports (-webkit-overflow-scrolling: touch) {
+		.projectImageContainer {
+		height: 30%;
+		width: 70%;
+		}
 	}
 }
+/*CSS CROSS BROWSER REQUIRED*/
+.carousel .control-next.control-arrow:before {
+    border-left: 10px solid #FF1800 !important;
+    webkit-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                    transform: scale(1.5);
 
+}
+
+.carousel .control-prev.control-arrow:before {
+    border-right: 10px solid #FF1800 !important;
+    webkit-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                    transform: scale(1.5);
+}
+
+.control-arrow {
+    opacity: 1 !important;
+    -webkit-animation: arrow 1s infinite alternate;
+  animation: arrow 1s infinite alternate;
+}
+@-webkit-keyframes arrow {
+  to {
+      opacity: 0.4;
+      -webkit-transform: scale(2.0);
+  }
+}
+@keyframes arrow {
+  to {
+   opacity: 0.4 ;
+   -webkit-transform: scale(2.0);
+           transform: scale(2.0);
+
+  }
+}

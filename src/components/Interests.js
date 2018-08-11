@@ -1,50 +1,40 @@
-import React, { Component } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
+import React, { Component } from "react";
 import SectionTitle from "./smallcomponents/SectionTitle.js"
-import { Carousel } from 'react-responsive-carousel';
+import PropTypes from 'prop-types';
+import { Carousel } from "react-responsive-carousel";
 import "./Interests.css";
 
-import climb from '../images/L/climb.jpeg';
-import travel from '../images/L/travel.png';
-import skydive from '../images/L/skydive.png';
-
-
+const imagesAltText = [ 'Jeremy Skydiving', 'Jeremy Climbing', 'Jeremy in Morroco'];
+const blankSectionBeforeTitle = <div style={{maxHeight:"58px", "backgroundColor":"#79BDB4"}}></div>;
 
 class Interests extends Component{
 
   render(){
-    //Not working correctly
-   const blankSectionBeforeTitle = <div style={{maxHeight:'58px', 'backgroundColor':'var(--sectionTitleSpacers)'}}></div>;
     return(
-      <div id='funSection'>
+      <div id="funSection">
          {blankSectionBeforeTitle}
-        <SectionTitle name='Interests'/>
+        <SectionTitle name="Interests"/>
         <div id="funContent">
-          <div id='infunContent'>
-            <div id='funList'>
-              <ScrollAnimation animateIn='fadeInRight' animateOut='fadeOutLeft'>
-                <div id='funcontainer'>
+          <div id="infunContent">
+            <div id="funList">
+                <div id="funcontainer">
                   <p>Outside work, I like to:</p>
                   <li>Rock climb</li>
                   <li>Slackline</li>
-                  <li>Bike and Run</li>
+                  <li>Bike</li>
+                  <li>Run</li>
                   <li>Snowboard</li>
                   <li>Scuba dive</li>
                   <li>Travel</li>
                 </div>
-              </ScrollAnimation>
             </div>
-            <div id='funCarousel'>
-              <Carousel emulateTouch  useKeyboardArrows   autoPlay interval={2000} infiniteLoop >
-                <div className='funPhotoContainer'>
-                  <img className='projectImage' src={climb} alt='climb'/>
-                </div>
-                <div className="funPhotoContainer">
-                  <img className='projectImage' src={skydive} alt='travel'/>
-                </div>
-                <div className="funPhotoContainer">
-                  <img className='projectImage' src={travel} alt='skydive'/>
-                </div>
+            <div id="funCarousel">
+              <Carousel emulateTouch  useKeyboardArrows showArrows={false} autoPlay interval={3500} infiniteLoop showThumbs={false}>
+                {imagesAltText.map((image,index)=>(
+                  <div className="funPhotoContainer" key={index}>
+                      <img src={this.props.images[index]} alt={imagesAltText[index]}/>
+                  </div>
+                ))}
               </Carousel>
             </div>
           </div>
@@ -55,3 +45,8 @@ class Interests extends Component{
 }
 
 export default Interests;
+
+
+Interests.propTypes = {
+        images: PropTypes.array,
+    }

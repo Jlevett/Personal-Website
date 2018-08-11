@@ -1,10 +1,10 @@
-.sectionTitle{
+.sectionTitle {
 	font-family: 'Righteous', cursive;
 	font-size: 5vw;
 	text-transform: uppercase;
-	color: var(--sectionTitle);
+	color:#F73749;
 	text-align: center;
-	margin:0 !important;
-	padding:5px;
-	background-color: var(--sectionBackground);
+	margin: 0 !important;
+	padding: 5px;
+	background-color: #FFB839;
 }
