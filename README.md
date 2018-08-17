@@ -8,7 +8,7 @@ On a mobile it feels like an app.
 Its 100% PWA so it can be added as an application of a mobile device.
 Responsive over a wide range of devices.
 
-[GO TO IT HERE]( www.jeremylevett.com)
+[GO TO IT HERE.](https://www.jeremylevett.com/ "App Hosted Here")
 
 ## Technology
 * React
@@ -21,5 +21,5 @@ Responsive over a wide range of devices.
 
 
 ## Known Issues
-- Flixering in Internet Explorer.
+- Flickering in Internet Explorer.
 - Layout not working 100% in Internet Explorer
