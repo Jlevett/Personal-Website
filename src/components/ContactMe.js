@@ -34,13 +34,10 @@ class ContactMe extends Component{
   }
   // For windows chrome
   openPopUpEmailClient = () => {
-      var isChrome = !!window.chrome && !!window.chrome.webstore;
-      if(isChrome && navigator.userAgent.indexOf("Windows") !==-1){
           let url = "mailto:jlevett@engineer.com?subject=G'day&body=Thanks%20for%20getting%20in%20touch.%0D%0A%0D%0ACheers,%20Jeremy.";
           var win = window.open(url, "Email Client","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
           win.blur();
           window.focus();
-      }
   }
 
   render(){
