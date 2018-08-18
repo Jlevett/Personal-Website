@@ -20,12 +20,9 @@ class AboutSection extends Component{
             </ScrollAnimation>
           </div>
           <div id="blurbContainer">
-              <p id="aboutMeText">
-                I am a ReactJS engineer with a background in mechatronics engineering.
-                <br/><br/>
-                I create prototypes that exceed expectations, and manufacture award winning products.
-                I have been doing this for over 8 years while working in various roles
-                across industries (including medical devices).
+              <p id="aboutMeText">I am a React developer with a background in mechatronics engineering.
+              <br/><br/>For the last 8 years in various industries I have created prototypes that exceed
+               expectations and manufactured award winning products.
               </p>
           </div>
         </div>
